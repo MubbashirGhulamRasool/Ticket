@@ -59,13 +59,25 @@ while (programmStart == true) {
 bool loginSuccess = login(userName, userEmail);
 if (loginSuccess == true) {
 
-  print("Add New Ticket Press 1");
-  print("Delete Ticket Press 2");
-  print("Delete New Ticket Press 1");
-  print("Delete New Ticket Press 1");
 
-   print("Enter Your Customer Name"); 
-   String customerName = stdin.readLineSync()!;
+  print("Add New Ticket Press 1");
+  print("View Ticket Press 2");
+  print("Delete Ticket Press 3");
+  print("Update New Ticket Press 4");
+  
+  int option = int.parse(stdin.readLineSync()!);
+  switch (option) {
+    case 1:
+      print("Hello 1 $option");
+      break;
+       case 2:
+      print("Hello 2 $option");
+      break;
+    default:
+  }
+
+  print("Enter Your Customer Name"); 
+  String customerName = stdin.readLineSync()!;
   // String customerName = "John Doe";
   Ticket newTicket = generateTicket(customerName);
 
